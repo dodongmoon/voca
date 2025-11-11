@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>슬램덩크 공부법 30일</title>
 <style>
   :root {
@@ -772,7 +773,32 @@
     text-decoration: none;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 20px 10px;
+    }
+
+    .container {
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
+    .days-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 5px;
+    }
+
+    .day-button {
+      padding: 15px;
+      font-size: 16px;
+    }
+
     .modal-content-image {
       max-width: 95%;
       max-height: 85%;
@@ -787,6 +813,37 @@
     .basketball-icon {
       font-size: 1em;
       margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .test-content {
+      padding: 20px 15px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      padding: 15px;
+    }
+
+    .days-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .day-button {
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .basketball-icon {
+      font-size: 0.9em;
+      margin-left: 5px;
     }
   }
 </style>
@@ -796,7 +853,7 @@
   <div class="container">
     <h1>
       슬램덩크 공부법 30일 
-      <span class="basketball-icon" ondblclick="showSlamDunkImage()" title="더블클릭하면 슬램덩크 이미지가 나타납니다!">🏀</span>
+      <span class="basketball-icon" onclick="showSlamDunkImage()" title="클릭하면 슬램덩크 이미지가 나타납니다!">🏀</span>
     </h1>
     <div id="dayContainers" class="days-grid"></div>
   </div>
